@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#PBS -l select=1:ncpus=4:mem=256gb
+#PBS -l select=1:ncpus=4:mem=64gb
 
 # set max execution time
 #PBS -l walltime=100:00:0

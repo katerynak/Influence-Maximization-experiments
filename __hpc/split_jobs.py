@@ -18,7 +18,7 @@ for lev_dir, _, _ in level_dirs:
 
 
 n_cpus = 4
-mem = 64
+def_mem = 64
 walltime = 100
 queue = "common"
 
@@ -30,6 +30,8 @@ if not os.path.exists(directory):
 for sub_dir in sub_directories:
 	if "amazon" in sub_dir:
 		mem = 256
+	else:
+		mem = def_mem
 	shell_text = """#!/bin/bash
 
 #PBS -l select=1:ncpus={}:mem={}gb
