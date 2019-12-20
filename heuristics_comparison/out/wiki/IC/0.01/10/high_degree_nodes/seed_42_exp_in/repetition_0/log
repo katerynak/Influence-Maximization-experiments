@@ -1,0 +1,2 @@
+k,g_type,model,p,no_simulations,heuristic,random_seed,out_dir,out_name,exec_time,influence_spread,seed_set
+10,wiki,IC,0.01,100,high_degree_nodes,42,../experiments/heuristics_comparison/out/wiki/IC/0.01/10/high_degree_nodes/seed_42_exp_in/repetition_0,,0.005452871322631836,(104.0, 15.01932089010685),[1133, 1151, 1374, 1549, 2688, 457, 2565, 1166, 766, 11]

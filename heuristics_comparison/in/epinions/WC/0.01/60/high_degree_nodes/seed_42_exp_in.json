@@ -1,0 +1,13 @@
+{
+    "script": "inf_max_comparison.py",
+    "n_repetitions": 1,
+    "script_args": {
+        "no_simulations": 100,
+        "random_seed": 42,
+        "g_type": "epinions",
+        "model": "WC",
+        "p": "0.01",
+        "k": "60",
+        "heuristic": "high_degree_nodes"
+    }
+}
