@@ -19,7 +19,7 @@ def default_values_dict():
 	args["max_generations"] = 100
 	args["n_parallel"] = 4
 	args["g_type"] = 'amazon'
-	args["smart_initialization"] = "none" # ?? come nel paper? nessuno?
+	args["smart_initialization"] = "none"
 	args["crossover_rate"] = 1.0
 	args["mutation_rate"] = 0.1
 	args["tournament_size"] = 5
@@ -27,8 +27,7 @@ def default_values_dict():
 	args["min_degree"] = 0
 	# global search only
 	args["adaptive_local_rate"] = False
-	args["local_search_rate"] = 0.
-	# args["global_mutation_operator"] = "ea_global_low_deg_mutation"
+	args["local_search_rate"] = 1
 
 	return make_dict_read_only(args)
 
@@ -39,7 +38,7 @@ script = "evolutionary_algorithm_exec.py"
 
 # variables to track, keeping to defaults the others
 #TODO: add embeddings files parameters
-Local_mutation_operator = ['ea_local_neighbors_second_degree_mutation', "ea_local_neighbors_second_degree_mutation_emb", "ea_local_embeddings_mutation",
+Local_mutation_operator = ['ea_local_neighbors_second_degree_mutation',
 								 "ea_local_neighbors_random_mutation"]
 
 variables = ['local_mutation_operator']
@@ -51,8 +50,8 @@ values = [Local_mutation_operator]
 models = ["IC", "WC"]
 graph_types = ["wiki", "amazon", 'CA-GrQc']
 K = [10, 20, 30, 40, 50]
-# repeat for 5 different seeds to be sure the improvement is not due to a particular seed
-random_seeds = range(2)
+# repeat for 3 different seeds to be sure the improvement is not due to a particular seed
+random_seeds = range(3)
 
 configs = list(itertools.product(*[graph_types, models, K, random_seeds]))
 config_vars = ["g_type", "model", "k", "random_seed"]
@@ -75,7 +74,7 @@ for config in configs:
 			args["out_name"] = "{}_{}_".format(var, var_value)
 
 			# write the input file
-			in_dir = "./in/" + config[0] + "/" + var + "/" + config[1] + "/" + config[2] + "/" + "{}".format(var_value)
+			in_dir = "./in/" + config[0] + "/" + var + "/" + config[1] + "/" + str(config[2]) + "/" + "{}".format(var_value)
 			if not os.path.exists(in_dir):
 				os.makedirs(in_dir)
 
