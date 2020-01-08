@@ -11,13 +11,13 @@ def default_values_dict():
 	args["p"] = 0.01
 	args["spread_function"] = "monte_carlo_max_hop"
 	args["no_simulations"] = 100
-	args["max_hop"] = 2
+	args["max_hop"] = 3
 	args["population_size"] = 100
 	args["offspring_size"] = 100
 	args["max_individual_copies"] = 100
 	args["random_seed"] = 42
 	args["max_generations"] = 100
-	args["n_parallel"] = 4
+	args["n_parallel"] = 1
 	args["g_type"] = 'amazon'
 	args["smart_initialization"] = "none"
 	args["crossover_rate"] = 1.0
