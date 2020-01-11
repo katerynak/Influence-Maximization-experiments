@@ -22,6 +22,7 @@
         "adaptive_local_rate": false,
         "local_search_rate": 0,
         "global_mutation_operator": "ea_global_random_mutation",
+        "local_mutation_operator": "ea_local_neighbors_random_mutation",
         "model": "WC",
         "min_degree": 1,
         "out_name": "min_degree_1_"
