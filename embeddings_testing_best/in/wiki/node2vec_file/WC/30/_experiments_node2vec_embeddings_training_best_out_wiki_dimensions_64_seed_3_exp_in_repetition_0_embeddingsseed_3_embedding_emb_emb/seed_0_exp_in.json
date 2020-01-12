@@ -1,0 +1,31 @@
+{
+    "script": "evolutionary_algorithm_exec.py",
+    "n_repetitions": 1,
+    "script_args": {
+        "k": 30,
+        "p": 0.01,
+        "spread_function": "monte_carlo_max_hop",
+        "no_simulations": 100,
+        "max_hop": 3,
+        "population_size": 100,
+        "offspring_size": 100,
+        "max_individual_copies": 100,
+        "random_seed": 0,
+        "max_generations": 100,
+        "n_parallel": 1,
+        "g_type": "wiki",
+        "smart_initialization": "none",
+        "crossover_rate": 1.0,
+        "mutation_rate": 0.1,
+        "tournament_size": 5,
+        "num_elites": 2,
+        "min_degree": 0,
+        "adaptive_local_rate": false,
+        "local_search_rate": 1,
+        "local_mutation_operator": "ea_local_embeddings_mutation",
+        "global_mutation_operator": "ea_global_random_mutation",
+        "model": "WC",
+        "node2vec_file": "../experiments/node2vec_embeddings_training_best/out/wiki/dimensions_64/seed_3_exp_in/repetition_0/embeddingsseed_3_embedding.emb.emb",
+        "out_name": "node2vec_file__experiments_node2vec_embeddings_training_best_out_wiki_dimensions_64_seed_3_exp_in_repetition_0_embeddingsseed_3_embedding_emb_emb_"
+    }
+}
