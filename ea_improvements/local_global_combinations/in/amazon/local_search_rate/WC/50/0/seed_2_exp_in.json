@@ -20,7 +20,7 @@
         "tournament_size": 5,
         "num_elites": 2,
         "min_degree": 0,
-        "adaptive_local_rate": false,
+        "adaptive_local_rate": "False",
         "local_mutation_operator": "ea_local_neighbors_random_mutation",
         "global_mutation_operator": "ea_global_random_mutation",
         "local_search_rate": 0,
