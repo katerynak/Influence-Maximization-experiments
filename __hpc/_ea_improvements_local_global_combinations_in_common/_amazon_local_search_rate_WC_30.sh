@@ -16,3 +16,4 @@ module load python-3.7.2
 # pip3.7 install python-louvain --user
 cd Influence-Maximization/src/
 python3 experiments.py --exp_dir=../experiments/ea_improvements/local_global_combinations/in/amazon/local_search_rate/WC/30 --hpc=True & python3 experiments.py --exp_dir=../experiments/ea_improvements/local_global_combinations/in/amazon/local_search_rate/WC/50 --hpc=True & python3 experiments.py --exp_dir=../experiments/ea_improvements/local_global_combinations/in/amazon/adaptive_local_rate/IC/10 --hpc=True & python3 experiments.py --exp_dir=../experiments/ea_improvements/local_global_combinations/in/amazon/adaptive_local_rate/IC/40 --hpc=True & 
+wait
