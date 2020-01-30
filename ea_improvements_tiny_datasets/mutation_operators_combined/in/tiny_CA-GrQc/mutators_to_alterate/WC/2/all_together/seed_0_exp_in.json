@@ -37,8 +37,6 @@
         "mutators_to_alterate": [
             "ea_local_activation_mutation",
             "ea_local_neighbors_second_degree_mutation",
-            "ea_local_neighbors_second_degree_mutation_emb",
-            "ea_local_embeddings_mutation",
             "ea_local_neighbors_random_mutation",
             "ea_local_neighbors_spread_mutation",
             "ea_local_additional_spread_mutation",
