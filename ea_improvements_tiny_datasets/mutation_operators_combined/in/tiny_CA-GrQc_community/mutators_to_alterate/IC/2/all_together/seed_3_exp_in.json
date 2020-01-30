@@ -44,7 +44,6 @@
             "ea_global_activation_mutation",
             "ea_global_low_deg_mutation",
             "ea_global_random_mutation",
-            "ea_differential_evolution_mutation",
             "ea_global_low_spread",
             "ea_global_low_additional_spread",
             "ea_global_subpopulation_mutation"
