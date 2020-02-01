@@ -6,8 +6,8 @@
         "random_seed": 42,
         "g_type": "amazon",
         "model": "IC",
-        "p": "0.01",
-        "k": "50",
+        "p": 0.01,
+        "k": 50,
         "heuristic": "single_discount_high_degree_nodes"
     }
 }

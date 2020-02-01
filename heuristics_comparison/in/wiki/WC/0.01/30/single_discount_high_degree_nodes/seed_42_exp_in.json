@@ -6,8 +6,8 @@
         "random_seed": 42,
         "g_type": "wiki",
         "model": "WC",
-        "p": "0.01",
-        "k": "30",
+        "p": 0.01,
+        "k": 30,
         "heuristic": "single_discount_high_degree_nodes"
     }
 }

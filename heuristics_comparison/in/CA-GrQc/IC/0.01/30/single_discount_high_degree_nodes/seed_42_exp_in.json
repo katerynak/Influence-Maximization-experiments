@@ -6,8 +6,8 @@
         "random_seed": 42,
         "g_type": "CA-GrQc",
         "model": "IC",
-        "p": "0.01",
-        "k": "30",
+        "p": 0.01,
+        "k": 30,
         "heuristic": "single_discount_high_degree_nodes"
     }
 }

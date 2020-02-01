@@ -6,8 +6,8 @@
         "random_seed": 42,
         "g_type": "epinions",
         "model": "WC",
-        "p": "0.01",
-        "k": "100",
+        "p": 0.01,
+        "k": 100,
         "heuristic": "CELF"
     }
 }
