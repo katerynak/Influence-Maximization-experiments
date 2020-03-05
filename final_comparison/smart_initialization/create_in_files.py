@@ -10,10 +10,10 @@ def default_values_dict():
 	args["k"] = 10
 	args["p"] = 0.01
 	args["spread_function"] = "monte_carlo_max_hop"
-	args["no_simulations"] = 10
+	args["no_simulations"] = 100
 	args["max_hop"] = 3
-	args["population_size"] = 30
-	args["offspring_size"] = 30
+	args["population_size"] = 100
+	args["offspring_size"] = 100
 	args["max_individual_copies"] = 100
 	args["random_seed"] = 42
 	args["max_generations"] = 100
