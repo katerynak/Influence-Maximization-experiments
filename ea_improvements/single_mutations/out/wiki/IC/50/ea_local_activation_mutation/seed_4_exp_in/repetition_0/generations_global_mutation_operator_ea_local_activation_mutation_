@@ -1,0 +1,2 @@
+generation number, pop_size, worst, best, median, avg, std, diversity, improvement, number_of_selections
+0, 100, 52.79, 77.27, 60.35, 60.952200000000005, 4.460426567044906,0.9929737373737374,0,1, 100, 57.98, 77.27, 67.28, 66.8747, 4.479286205412643,0.965579797979798,0.0,

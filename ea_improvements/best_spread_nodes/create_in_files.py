@@ -22,7 +22,7 @@ def default_values_dict():
 	args["g_new_edges"] = 3
 	args["g_seed"] = 0
 	args["g_file"] = None
-	args["g_type"] = 'tiny_amazon'
+	args["g_type"] = 'amazon'
 	args["out_file"] = None
 	args["log_file"] = None
 	args["generations_file"] = None
@@ -44,23 +44,30 @@ def default_values_dict():
 	args["moving_avg_len"] = 100
 	args["exploration_weight"] = 1
 	args["node2vec_file"] = None
+	args["best_nodes_percentage"] = 0.01
+	args["filter_best_spread_nodes"] = True
+	args["out_name"] = None
+
+	args["dynamic_population"] = False
 
 	return make_dict_read_only(args)
-
 
 n_repetitions = 1
 
 script = "evolutionary_algorithm_exec.py"
 
 # variables to track, keeping to defaults the others
-P = [0.01, 0.001]
-variables = ['best_nodes_percentage']
-values = [P]
+# smart_initialization = ["none", "degree", "eigenvector", "katz", "closeness", "betweenness",
+# 						"community", "community_degree", "community_degree_spectral", "degree_random", "degree_random_ranked"]
+# variables = ['smart_initialization']
+# values = [smart_initialization]
 
 # variables to change for each experiment
 
 models = ["IC", "WC"]
-graph_types = ["wiki", "amazon", 'CA-GrQc']
+graph_types = ["amazon", "wiki", 'CA-GrQc']
+# epinions??
+
 K = [10, 20, 30, 40, 50]
 # repeat for 3 different seeds to be sure the improvement is not due to a particular seed
 random_seeds = range(5)
@@ -71,22 +78,23 @@ config_vars = ["g_type", "model", "k", "random_seed"]
 # for each configuration
 for config in configs:
 	# change one variable at a time
-	for var, var_values in zip(variables, values):
+	# for var, var_values in zip(variables, values):
 		# for each value of this variable
-		for var_value in var_values:
+		# for var_value in var_values:
 			args = default_values_dict().get_copy()
 			for c_value, c_var in zip(config, config_vars):
 				args[c_var] = c_value
-			args[var] = var_value
+			# args[var] = var_value
 			# set in the experiments offspring size equal to the population size
-			if var == "population_size":
-				args["offspring_size"] = var_value
+			# if var == "population_size":
+			# 	args["offspring_size"] = var_value
 
 			# output file name suffix
-			args["out_name"] = "{}_{}_".format(var, var_value)
+			# args["out_name"] = "{}_{}_".format(var, var_value)
+
 
 			# write the input file
-			in_dir = "./in/" + config[0] + "/" + var + "/" + config[1] + "/" + str(config[2]) + "/" + "{}".format(var_value)
+			in_dir = "./in/" + config[0] + "/" + config[1] + "/" + str(config[2])
 			if not os.path.exists(in_dir):
 				os.makedirs(in_dir)
 

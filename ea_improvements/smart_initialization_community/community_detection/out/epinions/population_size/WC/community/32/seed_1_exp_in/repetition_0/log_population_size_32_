@@ -1,0 +1,2 @@
+k,p,spread_function,no_simulations,max_hop,model,population_size,offspring_size,random_seed,max_generations,n_parallel,g_nodes,g_new_edges,g_type,g_seed,g_file,out_file,log_file,generations_file,out_name,out_dir,smart_initialization,smart_initialization_percentage,exec_time,best_fitness,best_mc_spread
+5,0.1,monte_carlo_max_hop,100,2,WC,32,32,1,10,4,75879,3,epinions,0,None,None,None,None,population_size_32_,../experiments/smart_initialization/community_detection/out/epinions/population_size/WC/community/32/seed_1_exp_in/repetition_0,community,0.5,140.0589919090271,54.08,255.3

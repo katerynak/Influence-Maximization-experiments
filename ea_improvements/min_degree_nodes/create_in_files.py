@@ -18,40 +18,66 @@ def default_values_dict():
 	args["random_seed"] = 42
 	args["max_generations"] = 100
 	args["n_parallel"] = 1
+	args["g_nodes"] = 100
+	args["g_new_edges"] = 3
+	args["g_seed"] = 0
+	args["g_file"] = None
 	args["g_type"] = 'amazon'
+	args["out_file"] = None
+	args["log_file"] = None
+	args["generations_file"] = None
 	args["smart_initialization"] = "none"
+	args["community_detection_algorithm"] = "louvain"
+	args["n_clusters"] = 10
+	args["smart_initialization_percentage"] = 1
 	args["crossover_rate"] = 1.0
 	args["mutation_rate"] = 0.1
 	args["tournament_size"] = 5
 	args["num_elites"] = 2
-	# args["min_degree"] = 0
-	# global search only
-	args["adaptive_local_rate"] = False
-	args["local_search_rate"] = 0
+	args["min_degree"] = 0
+	args["adaptive_local_rate"] = "False"
+	args["local_mutation_operator"] = "ea_local_neighbors_random_mutation"
 	args["global_mutation_operator"] = "ea_global_random_mutation"
+	args["local_search_rate"] = 0
+	args["mutators_to_alterate"] = [
+		"ea_local_activation_mutation",
+		'ea_local_neighbors_second_degree_mutation',
+		"ea_local_embeddings_mutation",
+		"ea_local_neighbors_random_mutation",
+		"ea_local_approx_spread_mutation",
+		"ea_global_activation_mutation",
+		"ea_global_low_deg_mutation",
+		"ea_global_random_mutation",
+	]
+	args["adaptive_mutations"] = False
+	args["moving_avg_len"] = 10
+	args["exploration_weight"] = 1 # dinamico
+	args["node2vec_file"] = None
+	args["best_nodes_percentage"] = 1 # da mettere automatico , opp mettere limite allo spazio di combinazioni
+	args["filter_best_spread_nodes"] = False
+	args["out_name"] = None
+
+	args["dynamic_population"] = False
 
 	return make_dict_read_only(args)
-
 
 n_repetitions = 1
 
 script = "evolutionary_algorithm_exec.py"
 
-# variables to track, keeping to defaults the others
-
-Min_degree = [0, 1, 2, 3, 4]
-
-variables = ['min_degree']
-values = [Min_degree]
-
-# variables to change for each experiment
-#TODO: forse non serve il modello IC per amazon
-
 models = ["IC", "WC"]
-graph_types = ["wiki", "amazon", 'CA-GrQc']
+graph_types = ["amazon", "wiki", 'CA-GrQc']
+
+
+# variables to track, keeping to defaults the others
+Min_degrees = [1, 2, 3, 4]
+variables = ['min_degree']
+values = [Min_degrees]
+
 K = [10, 20, 30, 40, 50]
 # repeat for 3 different seeds to be sure the improvement is not due to a particular seed
-random_seeds = range(3)
+random_seeds = range(5)
+# random_seeds = [0]
 
 configs = list(itertools.product(*[graph_types, models, K, random_seeds]))
 config_vars = ["g_type", "model", "k", "random_seed"]
@@ -65,16 +91,18 @@ for config in configs:
 			args = default_values_dict().get_copy()
 			for c_value, c_var in zip(config, config_vars):
 				args[c_var] = c_value
+
 			args[var] = var_value
-			# set in the experiments offspring size equal to the population size
-			if var == "population_size":
-				args["offspring_size"] = var_value
 
 			# output file name suffix
 			args["out_name"] = "{}_{}_".format(var, var_value)
 
+			# node2vec file with same params
+			# args["node2vec_file"] = "../experiments/node2vec_embeddings_training_best/out/{}/dimensions_128/seed_4_exp_" \
+			# 						   "in/repetition_0/embeddingsseed_4_embedding.emb.emb".format(config[0])
+
 			# write the input file
-			in_dir = "./in/" + config[0] + "/" + var + "/" + config[1] + "/" + str(config[2]) + "/" + "{}".format(var_value)
+			in_dir = "./in/" + config[0] + "/" + var + "/" + config[1] + "/" + str(config[2]) + "/{}".format(var_value)
 			if not os.path.exists(in_dir):
 				os.makedirs(in_dir)
 
