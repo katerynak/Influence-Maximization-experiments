@@ -1,0 +1,22 @@
+{
+    "script": "embeddings.py",
+    "n_repetitions": 1,
+    "script_args": {
+        "walk_length": 80,
+        "num_walks": 10,
+        "workers": 4,
+        "window_size": 10,
+        "iter": 1,
+        "p": 1,
+        "q": 1,
+        "min_count": 1,
+        "batch_words": 4,
+        "random_seed": 3,
+        "g_nodes": 1000,
+        "g_new_edges": 2,
+        "g_type": "barabasi_albert",
+        "g_seed": 0,
+        "dimensions": "128",
+        "out_name": "_window_size_10_"
+    }
+}

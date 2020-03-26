@@ -1,0 +1,22 @@
+{
+    "script": "embeddings.py",
+    "n_repetitions": 1,
+    "script_args": {
+        "walk_length": 80,
+        "num_walks": 10,
+        "workers": 4,
+        "window_size": 10,
+        "iter": 10,
+        "p": 1,
+        "q": 1,
+        "min_count": 1,
+        "batch_words": 4,
+        "random_seed": 0,
+        "g_nodes": 1000,
+        "g_new_edges": 2,
+        "g_type": "wiki",
+        "g_seed": 0,
+        "dimensions": "128",
+        "out_name": "_iter_10_"
+    }
+}
