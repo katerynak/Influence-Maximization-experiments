@@ -1,0 +1,15 @@
+,dataset,mc_mcmh_corr,mc_th_corr,mc_exec,mcmh_exec,th_exec,mc_std
+0,barabasi_albert_nodes_1000_n_edges_1,0.936,0.957,0.002,0.001,0.003,1.161
+1,barabasi_albert_nodes_1000_n_edges_3,0.88,0.896,0.013,0.003,0.007,11.127
+2,barabasi_albert_nodes_1000_n_edges_5,0.79,0.792,0.113,0.005,0.012,24.991
+3,barabasi_albert_nodes_1000_n_edges_7,0.601,0.6,0.233,0.008,0.017,13.505
+4,barabasi_albert_nodes_1000_n_edges_9,0.324,0.316,0.29,0.01,0.021,5.462
+5,barabasi_albert_nodes_1000_n_edges_11,0.066,0.059,0.362,0.015,0.027,2.579
+6,barabasi_albert_nodes_10000_n_edges_1,0.896,0.93,0.002,0.001,0.024,1.724
+7,barabasi_albert_nodes_10000_n_edges_3,0.839,0.859,0.121,0.003,0.055,102.256
+8,barabasi_albert_nodes_10000_n_edges_5,0.699,0.714,1.153,0.006,0.09,256.68
+9,barabasi_albert_nodes_10000_n_edges_7,0.505,0.505,2.243,0.009,0.123,133.087
+10,barabasi_albert_nodes_10000_n_edges_9,0.325,0.325,3.077,0.013,0.155,50.706
+11,barabasi_albert_nodes_10000_n_edges_11,0.136,0.136,4.412,0.02,0.217,20.896
+12,amazon,0.571,0.761,0.002,0.002,3.897,0.465
+13,wiki,0.625,0.602,0.824,0.012,0.136,448.261

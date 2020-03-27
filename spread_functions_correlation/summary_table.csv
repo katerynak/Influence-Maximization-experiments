@@ -1,0 +1,16 @@
+,dataset,mc_mcmh_corr,mc_th_corr,mc_exec,mcmh_exec,th_exec,mc_std
+0,barabasi_albert_nodes_1000_n_edges_1,0.983,0.988,0.004,0.003,0.003,7.722
+1,barabasi_albert_nodes_1000_n_edges_3,0.962,0.967,0.019,0.007,0.007,13.097
+2,barabasi_albert_nodes_1000_n_edges_5,0.944,0.948,0.04,0.011,0.013,14.281
+3,barabasi_albert_nodes_1000_n_edges_7,0.934,0.94,0.065,0.016,0.019,14.227
+4,barabasi_albert_nodes_1000_n_edges_9,0.932,0.937,0.089,0.02,0.025,15.012
+5,barabasi_albert_nodes_1000_n_edges_11,0.932,0.937,0.102,0.022,0.03,16.014
+6,barabasi_albert_nodes_10000_n_edges_1,0.97,0.975,0.004,0.003,0.024,5.843
+7,barabasi_albert_nodes_10000_n_edges_3,0.937,0.943,0.021,0.007,0.054,17.048
+8,barabasi_albert_nodes_10000_n_edges_5,0.924,0.93,0.055,0.011,0.091,24.755
+9,barabasi_albert_nodes_10000_n_edges_7,0.921,0.928,0.098,0.016,0.128,31.286
+10,barabasi_albert_nodes_10000_n_edges_9,0.897,0.902,0.132,0.019,0.158,34.088
+11,barabasi_albert_nodes_10000_n_edges_11,0.888,0.894,0.197,0.025,0.211,36.614
+12,amazon,0.888,0.889,0.012,0.006,4.285,4.02
+13,wiki,0.982,0.985,0.02,0.014,0.142,5.114
+14,epinions,0.838,0.845,0.028,0.007,1.043,28.687
