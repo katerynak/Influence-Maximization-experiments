@@ -15,3 +15,4 @@ containing input .json files, where the experimental script, the number of repet
 the list of input parameters should be specified. For each .json file a correspondent directory with 
 output files and current source code revision number is created.
 
+An example of how all the results can be gathered together can be found in plot_results.py script.
